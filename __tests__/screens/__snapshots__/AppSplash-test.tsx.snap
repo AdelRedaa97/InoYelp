@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppSplach renders appSplash using Snapshots 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <RCTSafeAreaView
+    style={
+      {
+        "backgroundColor": "#245584",
+      }
+    }
+  />
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#F2EDDC",
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingBottom": 33.76,
+        "paddingHorizontal": 11.7,
+        "width": "100%",
+      }
+    }
+  >
+    <Image
+      source={
+        {
+          "default": "test-file-stub",
+        }
+      }
+      style={
+        {
+          "borderRadius": 15,
+          "height": 90,
+          "resizeMode": "cover",
+          "width": 90,
+        }
+      }
+    />
+  </View>
+</View>
+`;
