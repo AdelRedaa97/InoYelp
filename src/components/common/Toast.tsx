@@ -5,13 +5,20 @@ import React, {
   useCallback,
 } from 'react';
 import {View, Text, StyleSheet, Animated, Dimensions} from 'react-native';
+import {useThemeProvider} from '../../theme/ThemeProvider';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 interface IShow {
   message: string;
 }
 
-const Toast = forwardRef(({}, ref) => {
+export type ToastRef = {
+  show: ({message}: IShow) => void;
+};
+
+const Toast = forwardRef<ToastRef, {}>(({}, ref) => {
+  const {colors} = useThemeProvider().theme;
+
   const [fadeAnim] = useState(new Animated.Value(0));
 
   const DURATION = 1500;
@@ -48,8 +55,11 @@ const Toast = forwardRef(({}, ref) => {
 
   return (
     <Animated.View style={[styles.container, {opacity: fadeAnim}]}>
-      <View style={styles.toast}>
-        <Text style={styles.toastText}>{toastMessage}</Text>
+      <View
+        style={{...styles.toast, backgroundColor: colors.toastBackgroundColor}}>
+        <Text style={{...styles.toastText, color: colors.toastTextColor}}>
+          {toastMessage}
+        </Text>
       </View>
     </Animated.View>
   );
@@ -65,12 +75,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   toast: {
-    backgroundColor: 'rgba(0, 0, 0, 0.7)',
     borderRadius: 20,
     padding: 16,
   },
   toastText: {
-    color: '#FFFFFF',
     fontSize: 16,
     textAlign: 'center',
   },

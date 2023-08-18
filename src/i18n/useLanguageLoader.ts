@@ -2,18 +2,15 @@ import {useState, useEffect} from 'react';
 
 import './../i18n';
 import languages, {defaultLanguage} from '../i18n/languages';
-import {IApplicationState} from '../definitions/redux/IApplicationState';
 import {I18nManager} from 'react-native';
 import RNRestart from 'react-native-restart';
 import {useTranslation} from 'react-i18next';
-import {useSelector} from 'react-redux';
 import {ILanguage} from '../definitions/i18n/ILanguage';
+import {useAppSelector} from '../redux/store/store';
 
 export const useLanguageLoader = (): boolean => {
   const {i18n} = useTranslation();
-  const {language} = useSelector(
-    (state: IApplicationState) => state.appSettingsReducer,
-  );
+  const {language} = useAppSelector(state => state.appSettingsReducer);
 
   const [languageLoaded, setLanguageLoaded] = useState(false);
 

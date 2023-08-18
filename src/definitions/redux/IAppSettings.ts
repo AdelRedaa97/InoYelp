@@ -6,10 +6,18 @@ export interface IAppSettingsReducer {
   language: ILanguage;
 }
 
-export interface IAppSettingsAction {
-  type: string;
+export type TAppSettingsAction = ISetTheme | ISetLanguage;
+
+export interface ISetTheme {
+  type: 'APPSETTINGS_SET_THEME';
   payload: {
-    theme?: TThemeMode;
-    language?: ILanguage;
+    theme: TThemeMode;
+  };
+}
+
+export interface ISetLanguage {
+  type: 'APPSETTINGS_SET_LANGUAGE';
+  payload: {
+    language: ILanguage;
   };
 }

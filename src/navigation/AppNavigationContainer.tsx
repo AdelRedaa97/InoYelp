@@ -3,14 +3,11 @@ import {NavigationContainer} from '@react-navigation/native';
 import MainStack from './MainStack';
 
 import ThemeProvider from '../theme/ThemeProvider';
-import {useSelector} from 'react-redux';
-import {IApplicationState} from '../definitions/redux/IApplicationState';
 import {useLanguageLoader} from '../i18n/useLanguageLoader';
+import {useAppSelector} from '../redux/store/store';
 
 const AppNavigationContainer = () => {
-  const {theme} = useSelector(
-    (state: IApplicationState) => state.appSettingsReducer,
-  );
+  const {theme} = useAppSelector(state => state.appSettingsReducer);
 
   const languageLoaded = useLanguageLoader();
 

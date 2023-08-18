@@ -14,6 +14,9 @@ export default {
     primaryHighlightColor: '#245584',
     secondaryHighlightColor: '#DA3C38',
 
+    toastBackgroundColor: 'rgba(0, 0, 0, 0.7)',
+    toastTextColor: '#FFFFFF',
+
     white: '#FFF',
     transparent: '#0000',
   },

@@ -1,7 +1,7 @@
 import {APPSETTINGS_SET_LANGUAGE, APPSETTINGS_SET_THEME} from '../types';
 import {
   IAppSettingsReducer,
-  IAppSettingsAction,
+  TAppSettingsAction,
 } from '../../definitions/redux/IAppSettings';
 import {defaultLanguage} from '../../i18n/languages';
 
@@ -10,18 +10,18 @@ const initialState: IAppSettingsReducer = {
   language: defaultLanguage,
 };
 
-export default (state = initialState, {type, payload}: IAppSettingsAction) => {
-  switch (type) {
+export default (state = initialState, action: TAppSettingsAction) => {
+  switch (action.type) {
     case APPSETTINGS_SET_THEME:
       return {
         ...state,
-        theme: payload.theme,
+        theme: action.payload.theme,
       };
 
     case APPSETTINGS_SET_LANGUAGE:
       return {
         ...state,
-        language: payload.language,
+        language: action.payload.language,
       };
 
     default:
