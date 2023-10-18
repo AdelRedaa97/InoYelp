@@ -1,6 +1,11 @@
 # RNTemplate-mobile
 RNTemplate mobile app
 
+AFTER CLONE
+npx react-native-rename "Demo App" -b "com.demo.DemoApp"
+
+then remove template empty files from android
+
 <!-- ##### iOS 
 [![Build status](https://build.appcenter.ms/v0.1/apps/3bc80a63-f955-4a2f-9dd3-a24f2cfa06d4/branches/develop/badge)](https://appcenter.ms)
 ##### Android 
