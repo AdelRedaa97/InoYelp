@@ -6,6 +6,7 @@ import React, {
 } from 'react';
 import {View, Text, StyleSheet, Animated, Dimensions} from 'react-native';
 import {useThemeProvider} from '../../theme/ThemeProvider';
+import typography from '../../theme/typography';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 interface IShow {
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   toastText: {
-    fontSize: 16,
+    fontSize: typography.fontSize.fs16,
     textAlign: 'center',
   },
 });

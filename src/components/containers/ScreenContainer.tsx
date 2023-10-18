@@ -1,9 +1,5 @@
 import React from 'react';
 import {StyleSheet, View, SafeAreaView, StatusBar} from 'react-native';
-import {
-  heightPercentageToDP as hp,
-  widthPercentageToDP as wp,
-} from 'react-native-responsive-screen';
 import {IScreenContainer} from '../../definitions/components/IScreenContainer';
 import {useThemeProvider} from '../../theme/ThemeProvider';
 
@@ -15,6 +11,7 @@ const ScreenContainer = ({
   statusBarBackgroundColor,
   StatusBarStyle,
   header,
+  disableBottomSafeAreaView = false,
 }: IScreenContainer): JSX.Element => {
   const {colors, primaryStatusbarBarStyle} = useThemeProvider().theme;
 
@@ -47,6 +44,15 @@ const ScreenContainer = ({
         }}>
         {children}
       </View>
+      {!disableBottomSafeAreaView && (
+        <SafeAreaView
+          style={{
+            ...styles.safeAreaViewPaddingBottom,
+            backgroundColor:
+              style?.backgroundColor || colors.primaryBackgroundColor,
+          }}
+        />
+      )}
     </View>
   );
 };
@@ -62,7 +68,9 @@ const styles = StyleSheet.create({
   containerStyle: {
     flex: 1,
     width: '100%',
-    paddingBottom: hp(4),
-    paddingHorizontal: wp(3),
+    paddingHorizontal: 16,
+  },
+  safeAreaViewPaddingBottom: {
+    paddingBottom: 24,
   },
 });

@@ -18,7 +18,7 @@ const KeyboardAVContainer = ({
       enabled={true}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
-      keyboardVerticalOffset={Platform.OS === 'android' ? 0 : 50}>
+      keyboardVerticalOffset={Platform.OS === 'android' ? 48 : 100}>
       <ScrollView
         keyboardShouldPersistTaps="handled"
         keyboardDismissMode="on-drag"

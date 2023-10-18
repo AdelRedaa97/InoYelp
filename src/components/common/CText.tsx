@@ -21,7 +21,8 @@ export default CText;
 
 const styles = StyleSheet.create({
   defaultStyle: {
-    fontSize: typography.fontSize.medium,
+    fontSize: typography.fontSize.fs14,
     fontFamily: typography.fontFamily.Tajawal_Regular,
+    textAlign: 'left',
   },
 });

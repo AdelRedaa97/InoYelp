@@ -8,4 +8,5 @@ export interface IScreenContainer {
   statusBarBackgroundColor?: string;
   StatusBarStyle?: StatusBarStyle;
   header?: () => React.ReactNode;
+  disableBottomSafeAreaView?: boolean;
 }
