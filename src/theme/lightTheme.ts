@@ -6,9 +6,9 @@ export default {
   primaryStatusbarBarStyle: <StatusBarStyle>'light-content',
 
   colors: {
-    primaryBackgroundColor: '#F2EDDC',
+    primaryBackgroundColor: '#FFFFFF',
 
-    primaryTextColor: '#1A2E35',
+    primaryTextColor: '#000000',
     secondaryTextColor: '#4A4B4D',
 
     primaryHighlightColor: '#245584',
@@ -17,7 +17,11 @@ export default {
     toastBackgroundColor: 'rgba(0, 0, 0, 0.7)',
     toastTextColor: '#FFFFFF',
 
+    textInputBorderColor: '#DDE3E7',
+    textInputDisabledColor: '#F4F6F7',
+
     white: '#FFF',
+    black: '#000',
     transparent: '#0000',
   },
 };

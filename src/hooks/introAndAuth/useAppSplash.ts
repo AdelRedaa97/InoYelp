@@ -1,13 +1,14 @@
-// import {CommonActions, useNavigation} from '@react-navigation/native';
+import {CommonActions, useNavigation} from '@react-navigation/native';
 import {useEffect} from 'react';
 import RNBootSplash from 'react-native-bootsplash';
+import {R_LandingScreen} from '../../navigation/AppScreens';
 
 export const useAppSplash = () => {
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
 
   useEffect(() => {
     setTimeout(() => {
-      // navigateToLoginScreen();
+      navigateToLandingScreen();
       RNBootSplash.hide({fade: true, duration: 500});
     }, 2000);
     return () => {
@@ -15,12 +16,12 @@ export const useAppSplash = () => {
     };
   }, []);
 
-  // const navigateToLoginScreen = () => {
-  //   navigation.dispatch(
-  //     CommonActions.reset({
-  //       index: 0,
-  //       routes: [{name: R_Login}],
-  //     }),
-  //   );
-  // };
+  const navigateToLandingScreen = () => {
+    navigation.dispatch(
+      CommonActions.reset({
+        index: 0,
+        routes: [{name: R_LandingScreen}],
+      }),
+    );
+  };
 };

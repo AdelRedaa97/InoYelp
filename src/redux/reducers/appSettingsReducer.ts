@@ -6,7 +6,7 @@ import {
 import {defaultLanguage} from '../../i18n/languages';
 
 const initialState: IAppSettingsReducer = {
-  theme: 'system',
+  theme: 'light',
   language: defaultLanguage,
 };
 
