@@ -1,4 +1,4 @@
-package com.template.RNTemplate;
+package com.inova.task;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

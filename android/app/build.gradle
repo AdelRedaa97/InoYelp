@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.template.RNTemplate"
+    namespace "com.inova.task"
     defaultConfig {
-        applicationId "com.template.RNTemplate"
+        applicationId "com.inova.task"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
